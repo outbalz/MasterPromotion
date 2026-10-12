@@ -74,7 +74,7 @@ public class CFundManager : MonoBehaviour
 
     private void UpdateFundText()
     {
-        _fundText.text = $"{_fund}$";
+        _fundText.text = $"{_fund:0.00}$";
     }
 
 }
