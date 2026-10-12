@@ -51,6 +51,7 @@ public class CFundManager : MonoBehaviour
 
         if(amount > _instance._fund)
         {
+            CFeadbackMessageController.ShowFeadbackMessage("Not Enough Money!!");
             return false;
         }
 

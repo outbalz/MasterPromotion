@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Fish
   _itemSprite: {fileID: 1196240217, guid: 859c00bcd7c930448aefcad695bd60f2, type: 3}
+  _itemPrice: 5
   _healAmount: 12
