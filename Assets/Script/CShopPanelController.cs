@@ -33,6 +33,9 @@ public class CShopPanelController : MonoBehaviour
 
 	private void OnPurchaseButtonClick()
 	{
-		CInventoryManager.AddToInventory(_item, 1);
+		if (CFundManager.SpendFund(_item.ItemPrice))
+		{
+			CInventoryManager.AddToInventory(_item, 1);
+		}
 	}
 }

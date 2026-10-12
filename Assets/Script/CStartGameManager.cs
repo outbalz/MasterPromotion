@@ -5,7 +5,7 @@ public class CStartGameManager : MonoBehaviour
 {
     private void Awake()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     private void Update()
