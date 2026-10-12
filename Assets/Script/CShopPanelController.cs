@@ -19,17 +19,19 @@ public class CShopPanelController : MonoBehaviour
 		{
 			Debug.LogWarning("Missing UI element");
 		}
+
+		_purchaseButton.onClick.AddListener(OnPurchaseButtonClick);
     }
 
-    private void InitializeShopPanel(CItemDataSO item)
+    public void InitializeShopPanel(CItemDataSO item)
     {
         _item = item;
 		_itemImage.sprite = item.ItemSprite;
 		_nameText.text = item.ItemName;
-		_priceText.text = $"{item.ItemPrice}/$";
+		_priceText.text = $"{item.ItemPrice}$";
 	}
 
-	public void OnPurchaseButtonClick()
+	private void OnPurchaseButtonClick()
 	{
 		CInventoryManager.AddToInventory(_item, 1);
 	}

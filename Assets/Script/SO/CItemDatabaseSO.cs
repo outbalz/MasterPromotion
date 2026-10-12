@@ -24,4 +24,11 @@ public class CItemDatabaseSO : ScriptableObject
 
         return itemListMap;
     }
+
+    public CItemDataSO GetRandomItem()
+    {
+        int ranIndex = Random.Range(0, _itemList.Count);
+
+        return _itemList[ranIndex];
+    }
 }
