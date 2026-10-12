@@ -26,9 +26,10 @@ public class CShopPanelController : MonoBehaviour
         _item = item;
 		_itemImage.sprite = item.ItemSprite;
 		_nameText.text = item.ItemName;
-    }
+		_priceText.text = $"{item.ItemPrice}/$";
+	}
 
-    public void OnPurchaseButtonClick()
+	public void OnPurchaseButtonClick()
 	{
 		CInventoryManager.AddToInventory(_item, 1);
 	}
